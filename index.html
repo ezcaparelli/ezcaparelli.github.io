@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme Solutions — We build clean, fast websites</title>
+  <meta name="description" content="Acme Solutions helps small businesses launch modern, fast websites that convert." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="Acme Solutions" />
+  <meta property="og:description" content="We build clean, fast websites." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#home">Acme<span>Solutions</span></a>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>We build clean, fast websites.</h1>
+          <p>Launch a modern, mobile‑friendly site in days — not months. No jargon. No surprises. Just results.</p>
+          <div class="actions">
+            <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+            <a href="#services" class="btn btn-ghost">See Services</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <ul class="checks">
+            <li>Responsive design</li>
+            <li>SEO‑ready structure</li>
+            <li>Simple content management</li>
+            <li>SSL & custom domain</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Landing Pages</h3>
+            <p>High‑converting pages to test new ideas and capture leads.</p>
+          </div>
+          <div class="card">
+            <h3>Business Websites</h3>
+            <p>Clean, fast sites that explain what you do and why it matters.</p>
+          </div>
+          <div class="card">
+            <h3>Performance & SEO</h3>
+            <p>Core Web Vitals, accessibility, and on‑page SEO best practices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container narrow">
+        <h2 class="section-title">About</h2>
+        <p>We are a small, focused team passionate about simple, effective web experiences. We favor clarity, speed, and maintainability over complexity.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2 class="section-title">Contact</h2>
+        <p>Ready to start? Email us at <a href="mailto:hello@example.com">hello@example.com</a> or message us on <a href="#" aria-label="Your social profile link">your favorite social</a>.</p>
+        <div class="contact-cards">
+          <div class="card">
+            <h3>Email</h3>
+            <a href="mailto:hello@example.com">hello@example.com</a>
+          </div>
+          <div class="card">
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/15551234567">+1 (555) 123‑4567</a>
+          </div>
+          <div class="card">
+            <h3>Location</h3>
+            <p>Anywhere, Remote</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Acme Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile nav
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', () => nav.classList.toggle('open'));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
